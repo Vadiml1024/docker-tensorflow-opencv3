@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow:1.7.0-py3
 MAINTAINER Miguel Rodriguez <m.rodriguezs1990@gmail.com>
 
-ENV OPENCV_VERSION 3.2.0
+ENV OPENCV_VERSION 3.4.1
 ENV NUM_CORES 4
 
 # Install OpenCV
@@ -28,7 +28,8 @@ RUN apt-get -y update -qq && \
                        libv4l-dev \
                        libdc1394-22-dev \
 
-                       qt4-default \
+                       qt5-default \
+                       python3-pyqt5 \
 
                        # Missing libraries for GTK
                        libatk-adaptor \
